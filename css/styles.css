@@ -3,7 +3,19 @@ html {
     font-size: 12px;
 }
 
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 100vw;
+}
+
 header {
     text-decoration: none;
     font-weight: normal;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
