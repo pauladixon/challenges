@@ -18,3 +18,15 @@ let paula = {
 }
 
 
+let username = 'rick123'
+let password = 'aL8#klfo'
+
+if (enteredUsername !== username){
+    console.log('the username you entered is incorrect')
+} else if (enteredPassword !== password){
+    console.log('the password you entered is incorrect')
+} else if (enteredUsername === username && enteredPassword === password){
+    console.log('correct!')
+} else {
+    console.log('please try again')
+}
