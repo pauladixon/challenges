@@ -44,3 +44,7 @@ if (!enteredUsername || !enteredPassword) {
         console.log('either username or password are incorrect. try again')
     }
 }
+
+for (let i = 0; i <= 100; i++){
+    console.log(i+'mississippi')
+}
