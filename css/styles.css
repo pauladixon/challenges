@@ -14,8 +14,8 @@ body {
 
 .grid {
     margin-top: 50px;
-    width: 396px;
-    height: 396px;
+    width: 360px;
+    height: 360px;
     border: solid whitesmoke 8px;
     border-radius: 5px;
     display: flex;
@@ -25,16 +25,46 @@ body {
 .grid div {
     width: 20px;
     height: 20px;
-    border: solid whitesmoke .5px;
 }
 
-.even {
+.wall {
     background-color: thistle;
 }
 
-.odd {
+
+.power-pellet {
     background-color: wheat;
+    border-radius: 10px;
 }
+
+.pac-dot {
+    background-color: white;
+    border: 5px solid antiquewhite;
+    box-sizing: border-box;
+}
+
+.pac-man {
+    background-color: burlywood;
+    border-radius: 10px;
+}
+
+.inky {
+    background-color: skyblue;
+}
+
+.blinky {
+    background-color: goldenrod;
+}
+
+.pinky {
+    background-color: seagreen;
+}
+
+.clyde {
+    background-color: sandybrown;
+}
+
+
 
 header {
     text-decoration: none;
