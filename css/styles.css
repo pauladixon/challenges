@@ -71,6 +71,10 @@ body {
     margin-top: 50px;
 }
 
+.robot {
+    position: absolute;
+}
+
 
 .antenna {
     margin-left: 52.5px;

@@ -163,3 +163,15 @@ for (let i = 0; i < squares.length; i++) {
 //         }
 //     }
 // }
+
+const robot = document.querySelector('.robot')
+
+
+let number = 0
+
+function moveRobot(){
+    number += 50
+    robot.style.top = number + 'px'
+}
+
+robot.addEventListener('click', moveRobot)
