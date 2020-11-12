@@ -72,3 +72,19 @@ for (let i=0; i< squares.length; i++){
         squares[i].classList.add('odd')
     }
 }
+
+const shopInventory = ['milk', 'cheddar', 'mustard', 'ketchup', 'olive oil', 'cheddar', 'milk', 'garlic', 'mayo', 'carrots', 'cheddar', 'mustard', 'mayo', 'orange juice']
+
+ 
+let countMustard = function(){
+    let number = 0
+    for (let i=0; i<shopInventory.length; i++){
+        if (shopInventory[i] == 'mustard') {
+            number++
+        }
+    }
+    console.log(number)
+ }
+ 
+ 
+ countMustard()
