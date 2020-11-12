@@ -9,7 +9,25 @@ body {
     justify-content: center;
     flex-flow: row wrap;
     width: 100vw;
+    background-color: antiquewhite;
 }
+
+.grid {
+    margin-top: 50px;
+    width: 288px;
+    height: 288px;
+    border: solid whitesmoke 8px;
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div {
+    width: 30px;
+    height: 30px;
+    border: solid whitesmoke .5px;
+}
+
 
 header {
     text-decoration: none;
