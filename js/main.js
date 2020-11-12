@@ -84,7 +84,50 @@ let countMustard = function(){
         }
     }
     console.log(number)
- }
+}
  
- 
- countMustard()
+countMustard()
+
+
+const nightClubRegister = [
+    {
+        name: 'Ahmed',
+        lastname: 'Abdool',
+        age: 25,
+        gender: 'male'
+    },
+    {
+        name: 'Sally',
+        lastname: 'Morgan',
+        age: 18,
+        gender: 'female'
+    },
+    {
+        name: 'Dionne',
+        lastname: 'Brown',
+        age: 29,
+        gender: 'female'
+    },
+    {
+        name: 'Max',
+        lastname: 'Forrester',
+        age: 20,
+        gender: 'male'
+    }
+]
+
+for (let i=0; i<nightClubRegister.length; i++){
+    if (nightClubRegister[i].gender === 'male'){
+        if (nightClubRegister[i].age >= 21){
+            console.log('hello mr. ' + nightClubRegister[i].lastname + ', you may come in.')
+        } else {
+            console.log('sorry, mr. ' + nightClubRegister[i].lastname + ', you may not come in')
+        }
+    } else {
+        if (nightClubRegister[i].age >= 21){
+            console.log('hello ms. ' + nightClubRegister[i].lastname + ', you may come in.')
+        } else {
+            console.log('sorry, ms. ' + nightClubRegister[i].lastname + ', you may not come in')
+        }
+    }
+}
