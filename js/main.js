@@ -48,3 +48,8 @@ if (!enteredUsername || !enteredPassword) {
 for (let i = 0; i <= 100; i++){
     console.log(i+'mississippi')
 }
+
+let myArray = [1, 2, 3, 4, 5, 6, 7, 9, 10]
+for (let i = 0; i < myArray.length; i++){
+    console.log(myArray[i])
+}
