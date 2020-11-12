@@ -32,3 +32,15 @@ if (enteredUsername !== username){
 } else {
     console.log('please try again')
 }
+
+
+
+if (!enteredUsername || !enteredPassword) {
+    console.log('please provide username and password')
+} else {
+    if (enteredUsername === username && enteredPassword === password){
+        console.log('access granted')
+    } else {
+        console.log('either username or password are incorrect. try again')
+    }
+}
