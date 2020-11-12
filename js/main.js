@@ -73,61 +73,82 @@ for (let i=0; i< squares.length; i++){
     }
 }
 
-const shopInventory = ['milk', 'cheddar', 'mustard', 'ketchup', 'olive oil', 'cheddar', 'milk', 'garlic', 'mayo', 'carrots', 'cheddar', 'mustard', 'mayo', 'orange juice']
-
- 
-let countMustard = function(){
-    let number = 0
-    for (let i=0; i<shopInventory.length; i++){
-        if (shopInventory[i] == 'mustard') {
-            number++
-        }
-    }
-    console.log(number)
-}
- 
-countMustard()
-
-
-const nightClubRegister = [
-    {
-        name: 'Ahmed',
-        lastname: 'Abdool',
-        age: 25,
-        gender: 'male'
-    },
-    {
-        name: 'Sally',
-        lastname: 'Morgan',
-        age: 18,
-        gender: 'female'
-    },
-    {
-        name: 'Dionne',
-        lastname: 'Brown',
-        age: 29,
-        gender: 'female'
-    },
-    {
-        name: 'Max',
-        lastname: 'Forrester',
-        age: 20,
-        gender: 'male'
-    }
+const layout = [
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,3,1,2,2,2,1,1,1,1,1,1,2,2,2,2,3,1,
+    1,2,2,2,1,2,2,2,2,2,2,2,2,1,1,1,2,1,
+    1,1,1,1,1,2,1,1,1,1,1,1,2,1,1,1,1,1,
+    1,2,2,2,2,2,0,0,0,0,0,0,2,2,2,2,2,1,
+    1,1,1,1,2,1,1,1,0,0,1,1,1,2,1,1,1,1,
+    1,1,2,1,2,1,1,5,0,0,7,1,1,2,1,2,1,1,
+    1,1,2,2,2,1,1,6,0,0,8,1,1,2,2,2,1,1,
+    1,1,1,2,1,1,1,1,1,1,1,1,1,1,2,1,1,1,
+    2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,2,2,
+    1,1,2,1,1,1,1,1,1,2,1,1,1,1,1,2,1,1,
+    1,2,2,2,2,2,2,1,1,2,1,2,2,2,2,2,2,1,
+    1,2,1,2,1,1,2,1,1,2,1,1,2,1,1,1,2,1,
+    1,2,1,2,1,1,2,1,1,2,2,2,2,1,2,1,2,1,
+    1,2,1,2,1,1,2,1,1,2,1,1,2,1,2,1,2,1,
+    1,2,1,2,1,1,2,1,1,2,1,1,1,1,2,1,2,1,
+    1,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]
 
-for (let i=0; i<nightClubRegister.length; i++){
-    if (nightClubRegister[i].gender === 'male'){
-        if (nightClubRegister[i].age >= 21){
-            console.log('hello mr. ' + nightClubRegister[i].lastname + ', you may come in.')
-        } else {
-            console.log('sorry, mr. ' + nightClubRegister[i].lastname + ', you may not come in')
-        }
-    } else {
-        if (nightClubRegister[i].age >= 21){
-            console.log('hello ms. ' + nightClubRegister[i].lastname + ', you may come in.')
-        } else {
-            console.log('sorry, ms. ' + nightClubRegister[i].lastname + ', you may not come in')
-        }
-    }
-}
+// const shopInventory = ['milk', 'cheddar', 'mustard', 'ketchup', 'olive oil', 'cheddar', 'milk', 'garlic', 'mayo', 'carrots', 'cheddar', 'mustard', 'mayo', 'orange juice']
+
+ 
+// let countMustard = function(){
+//     let number = 0
+//     for (let i=0; i<shopInventory.length; i++){
+//         if (shopInventory[i] == 'mustard') {
+//             number++
+//         }
+//     }
+//     console.log(number)
+// }
+ 
+// countMustard()
+
+
+// const nightClubRegister = [
+//     {
+//         name: 'Ahmed',
+//         lastname: 'Abdool',
+//         age: 25,
+//         gender: 'male'
+//     },
+//     {
+//         name: 'Sally',
+//         lastname: 'Morgan',
+//         age: 18,
+//         gender: 'female'
+//     },
+//     {
+//         name: 'Dionne',
+//         lastname: 'Brown',
+//         age: 29,
+//         gender: 'female'
+//     },
+//     {
+//         name: 'Max',
+//         lastname: 'Forrester',
+//         age: 20,
+//         gender: 'male'
+//     }
+// ]
+
+// for (let i=0; i<nightClubRegister.length; i++){
+//     if (nightClubRegister[i].gender === 'male'){
+//         if (nightClubRegister[i].age >= 21){
+//             console.log('hello mr. ' + nightClubRegister[i].lastname + ', you may come in.')
+//         } else {
+//             console.log('sorry, mr. ' + nightClubRegister[i].lastname + ', you may not come in')
+//         }
+//     } else {
+//         if (nightClubRegister[i].age >= 21){
+//             console.log('hello ms. ' + nightClubRegister[i].lastname + ', you may come in.')
+//         } else {
+//             console.log('sorry, ms. ' + nightClubRegister[i].lastname + ', you may not come in')
+//         }
+//     }
+// }
