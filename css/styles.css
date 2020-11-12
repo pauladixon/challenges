@@ -28,6 +28,13 @@ body {
     border: solid whitesmoke .5px;
 }
 
+.even {
+    background-color: thistle;
+}
+
+.odd {
+    background-color: wheat;
+}
 
 header {
     text-decoration: none;
