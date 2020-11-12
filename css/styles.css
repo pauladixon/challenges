@@ -14,17 +14,17 @@ body {
 
 .grid {
     margin-top: 50px;
-    width: 288px;
-    height: 288px;
+    width: 396px;
+    height: 396px;
     border: solid whitesmoke 8px;
-    border-radius: 3px;
+    border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .grid div {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border: solid whitesmoke .5px;
 }
 
