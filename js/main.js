@@ -53,3 +53,11 @@ let myArray = [1, 2, 3, 4, 5, 6, 7, 9, 10]
 for (let i = 0; i < myArray.length; i++){
     console.log(myArray[i])
 }
+
+const people = 56
+
+for (let i=1; i <= people; i++){
+    if (i%2 === 0) {
+        console.log('blue team')
+    } else console.log ('red team')
+}
