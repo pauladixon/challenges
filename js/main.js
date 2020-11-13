@@ -175,3 +175,25 @@ function moveRobot(){
 }
 
 robot.addEventListener('click', moveRobot)
+
+
+
+
+const quote = document.querySelector('#quote')
+const button = document.querySelector('button')
+
+const quotes = [
+    "all i've got to do today is smile",
+    'the only joy in the world is to begin',
+    'there is no way to happiness - happiness is the way',
+    'may i be peaceful, light, and happy in body and in mind'
+]
+
+function displayQuote() {
+
+    let randomNumber = Math.floor(Math.random() * quotes.length)
+    let randomQuote = quotes[randomNumber]
+    quote.innerHTML = randomQuote
+}
+
+button.addEventListener('click', displayQuote)
