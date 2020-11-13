@@ -153,8 +153,13 @@ body {
     margin-top: -750px;
 }
 
+.title {
+    color: palevioletred;
+}
+
 .box {
     background-color: papayawhip;
+    color: yellowgreen;
     width: 180px;
     height: 180px;
     border-radius: 10px;
