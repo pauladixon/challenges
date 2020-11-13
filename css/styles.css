@@ -122,9 +122,10 @@ body {
     border-radius: 25px 25px 50px 50px;
 }
 
-.container2 {
+.quote-container {
     width: 100vw;
     margin: 0px 100px;
+    position: absolute;
 }
 
 #quote {
@@ -143,7 +144,7 @@ button {
     padding: 5px 10px;
 }
 
-.container3 {
+.track-container {
     display: flex;
     justify-content: space-around;
     width: 100vw;

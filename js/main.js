@@ -84,4 +84,31 @@ button.addEventListener('click', displayQuote)
 
 // list shift
 
+const leftButton = document.querySelector('#left')
+const rightButton = document.querySelector('#right')
+const waitListDisplay = document.querySelector('#first-list')
+const hereListDisplay = document.querySelector('#second-list')
 
+const waitList = ['furterer volumizers', 'bloomscape plant', 'bombas socks', 'dsw uggs', 'dyson replacement']
+const hereList = ['scratching post', 'rose toner']
+
+function moveRight(){
+    let package = hereList.pop()
+    waitList.push(package)
+    waitListDisplay.innerHTML = waitList
+    hereListDisplay.innerHTML = hereList
+}
+
+rightButton.addEventListener('click', moveRight)
+
+function moveLeft(){
+    let package = waitList.pop()
+    hereLisst.unshift(package)
+    waitListDisplay.innerHTML = waitList
+    hereListDisplay.innerHTML = hereList
+}
+
+leftButton.addEventListener('click', moveLeft)
+
+waitListDisplay.innerHTML = waitList
+hereListDisplay.innerHTML = hereList
