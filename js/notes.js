@@ -314,4 +314,14 @@ function caseInsensitivePalindrome(str) {
     return caselessStr === reversedCaselessStr;
 }
 
+function caseInsensitivePalindrome(str) {
+    const caselessStr = str.toLowerCase();
+    let reversedCaselessStr = '';
+
+    for(let i = caselessStr.length - 1; i >= 0; i--) {
+        reversedCaselessStr += caselessStr[i];
+    }
+    return caselessStr === reversedCaselessStr;
+}
+
 caseInsensitivePalindrome('aaaBaaa')
