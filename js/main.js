@@ -91,8 +91,8 @@ function createBoard() {
 
 createBoard()
 
-
-
+let pacmanCurrentIndex = 500
+squares[pacmanCurrentIndex].classList.add('pac-man')
 
 
 
