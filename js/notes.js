@@ -173,3 +173,23 @@ for (let i=1; i <= people; i++){
         console.log('blue team')
     } else console.log ('red team')
 }
+
+
+
+
+const userData = (data) => {
+    return new Promise( (resolve, reject) => {
+        setTimeout(() => {
+            const error = false
+            if(error){
+                reject('user data not found')
+            } else {
+                resolve(`here is your data: ${data}`)
+            }
+        }, 4000)
+    })
+}
+
+userData(':-)')
+.then((yes) => console.log(yes))
+.catch((error) => console.log(error))
