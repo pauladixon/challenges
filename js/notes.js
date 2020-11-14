@@ -358,3 +358,24 @@ function factorialNumber(num) {
 }
 
 factorialNumber(21)
+
+
+
+function firstDigit(str) {
+    let array = str.split('')
+    for (let i=0; i<array.length; i++){
+        if (array[i] >= 0){
+            return array[i]
+        }
+    }
+}
+
+function firstDigit(str) {
+    const strNums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    const chars = str.split('')
+    for(const char of chars) {
+        if(strNums.includes(char)) {
+            return char
+        }
+    }
+}
