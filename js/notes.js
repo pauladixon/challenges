@@ -217,11 +217,11 @@ userData2
 
 
 
-    
+
 
 fetch('https://jsonplaceholder.typicode.com/comments/1')
-    .then(response => response.json())
-    .then(data => console.log(data))
+    .then((response) => response.json())
+    .then((data) => console.log(data))
 
 
 fetch('https://jsonplaceholder.typicode.com/comments', {
@@ -233,5 +233,5 @@ fetch('https://jsonplaceholder.typicode.com/comments', {
         body: 'That was dope!'
     })
 })
-.then(response => response.json())
-.then(data => console.log(data))
+    .then((response) => response.json())
+    .then((data) => console.log(data))
