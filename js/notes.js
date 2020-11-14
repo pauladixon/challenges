@@ -261,7 +261,7 @@ photoUpload()
 
 
 
-const apiUrl = "https://api.chucknorris.io/jokes/random";
+const apiUrl = "https://api.chucknorris.io/jokes/random"
 
 async function printJoke() {
     let response = await fetch(apiUrl)
