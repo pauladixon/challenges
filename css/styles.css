@@ -32,8 +32,11 @@ body {
     background-color: thistle;
 }
 
+.ghost-lair {
+    background-color: antiquewhite;
+}
 
-.power-pellet {
+.power-pellets {
     background-color: wheat;
     border-radius: 7.5px;
 }
