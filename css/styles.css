@@ -50,6 +50,7 @@ body {
 .pac-man {
     background-color: burlywood;
     border-radius: 7.5px;
+    border: none;
 }
 
 .inky {
