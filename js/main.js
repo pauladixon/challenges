@@ -35,9 +35,7 @@
 //     if (layout[i] === 8) squares[i].classList.add('clyde')
 // }
 
-
-
-
+const width = 28
 
 
 

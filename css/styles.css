@@ -15,8 +15,8 @@ body {
 
 .grid {
     margin-top: 150px;
-    width: 360px;
-    height: 360px;
+    width: 420px;
+    height: 420px;
     border: solid whitesmoke 8px;
     border-radius: 5px;
     display: flex;
@@ -24,8 +24,9 @@ body {
 }
 
 .grid div {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
+    background-color: cornsilk;
 }
 
 .wall {
