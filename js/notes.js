@@ -213,3 +213,10 @@ const userData2 = new Promise((resolve, reject) => {
 userData2
     .then((data) => console.log(data))
     .catch((error) => console.log(error))
+
+
+
+    
+fetch('https://jsonplaceholder.typicode.com/comments/1')
+    .then(response => response.json())
+    .then(data => console.log(data))
