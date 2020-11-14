@@ -27,6 +27,18 @@
 
 
 
+// let planets = ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+// let location = planets.indexOf('Moon')
+// location = 0
+
+// let planets = ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+// let boolean = planets.includes('Moon')
+// boolean = true
+
+
+
+
+
 // const shopInventory = ['milk', 'cheddar', 'mustard', 'ketchup', 'olive oil', 'cheddar', 'milk', 'garlic', 'mayo', 'carrots', 'cheddar', 'mustard', 'mayo', 'orange juice']
 
  
