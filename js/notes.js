@@ -404,3 +404,12 @@ function largestNumber(num) {
     const placeholder = '9'.repeat(num)
     return parseInt(placeholder)
 }
+
+
+
+
+
+function maxMultiple(divisor, bound) {
+    let remainder = bound%divisor
+    return bound - remainder
+}
