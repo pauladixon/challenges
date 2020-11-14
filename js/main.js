@@ -84,7 +84,7 @@ function createBoard() {
         } else if (layout[i] === 2){
             squares[i].classList.add('ghost-lair')
         } else if (layout[i] === 3){
-            squares[i].classList.add('power-pellets')
+            squares[i].classList.add('power-pellet')
         }
     }
 }
