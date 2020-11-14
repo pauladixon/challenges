@@ -29,12 +29,20 @@
 
 // let planets = ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
 // let location = planets.indexOf('Moon')
-// location = 0
+// location = 0 
 
 // let planets = ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
 // let boolean = planets.includes('Moon')
 // boolean = true
 
+
+// let moon = 'Moon'
+// let padded = moon.padStart(10, 'a')
+// padded = aaaaaaMoon
+
+// let moon = 'Moon'
+// let padded = moon.padEnd(10, 'a')
+// padded = Moonaaaaaa
 
 
 
