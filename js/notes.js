@@ -270,3 +270,48 @@ async function printJoke() {
 }
 
 printJoke()
+
+
+
+// js challenges
+
+
+function arrayReplace(array, elemToReplace, substitutionElem) {
+    for (let i=0; i<array.length; i++) {
+        if (array[i] === elemToReplace) {
+            array[i] = substitutionElem
+        }
+    }
+    return array
+}
+
+arrayReplace([1,2,1], 1, 3)
+
+
+
+
+function caseInsensitivePalindrome(str) {
+    let lowercase = str.toLowerCase()
+    let result = 0
+    for (i=0; i<lowercase.length; i++){
+        if (lowercase[i] === lowercase[lowercase.length - (i+1)]) {
+            result += 0
+        } else {
+            result += 1
+        }
+    }
+    if (result > 0){
+        return false
+    } else {
+        return true
+    }
+}
+
+function caseInsensitivePalindrome(str) {
+    const caselessStr = str.toLowerCase();
+    const reversedCaselessStr = caselessStr.split('').reverse().join(''); 
+    
+    return caselessStr === reversedCaselessStr;
+}
+
+caseInsensitivePalindrome('aaaBaaa')
