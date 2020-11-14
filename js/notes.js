@@ -191,5 +191,25 @@ const userData = (data) => {
 }
 
 userData(':-)')
-.then((yes) => console.log(yes))
-.catch((error) => console.log(error))
+    .then((yes) => console.log(yes))
+    .catch((error) => console.log(error))
+
+
+
+const userData2 = new Promise((resolve, reject) => {
+    const error = false;
+    
+    if(error) {
+        reject('500 Level Error')
+    } else {
+        resolve({
+            firstName: 'Dylan',
+            age: 32,
+            email: 'DylansEmail310@gmail.com'
+        })
+    }
+})
+
+userData2
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error))
