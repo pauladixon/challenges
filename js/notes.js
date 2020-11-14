@@ -316,12 +316,33 @@ function caseInsensitivePalindrome(str) {
 
 function caseInsensitivePalindrome(str) {
     const caselessStr = str.toLowerCase();
-    let reversedCaselessStr = '';
+    let reversedCaselessStr = ''
 
     for(let i = caselessStr.length - 1; i >= 0; i--) {
-        reversedCaselessStr += caselessStr[i];
+        reversedCaselessStr += caselessStr[i]
     }
-    return caselessStr === reversedCaselessStr;
+    return caselessStr === reversedCaselessStr
 }
 
 caseInsensitivePalindrome('aaaBaaa')
+
+
+
+
+function encloseInBrackets(str) {
+    let array = str.split('')
+    array.unshift('(')
+    array.push(')')
+    let newStr = array.join('')
+    return newStr
+}
+
+function encloseInBrackets(str) {
+    const solution1 = '(' + str + ')'
+    const solution2 = `(${str})`
+    const solution3 = '('.concat(str, ')')
+    
+    return solution3
+}
+
+encloseInBrackets('abc')
