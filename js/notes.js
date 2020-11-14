@@ -177,6 +177,8 @@ for (let i=1; i <= people; i++){
 
 
 
+
+
 const userData = (data) => {
     return new Promise( (resolve, reject) => {
         setTimeout(() => {
@@ -235,3 +237,36 @@ fetch('https://jsonplaceholder.typicode.com/comments', {
 })
     .then(response => response.json())
     .then(data => console.log(data))
+
+
+
+
+
+const photos = []
+
+async function photoUpload() {
+    let uploadStatus = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            photos.push('profile pic')
+            resolve('photo has been uploaded')
+        }, 3000)
+    })
+
+    let result = await uploadStatus
+    console.log(result)
+    console.log(photos.length)
+}
+
+photoUpload()
+
+
+
+const apiUrl = "https://api.chucknorris.io/jokes/random";
+
+async function printJoke() {
+    let response = await fetch(apiUrl)
+    let joke = await response.json()
+    console.log(joke.value)
+}
+
+printJoke()
