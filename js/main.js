@@ -76,6 +76,10 @@ function createBoard() {
         const square = document.createElement('div')
         grid.appendChild(square)
         squares.push(square)
+
+        if (layout[i] === 0){
+            squares[i].classList.add(pac-dot)
+        }
     }
 }
 
