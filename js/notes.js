@@ -379,3 +379,28 @@ function firstDigit(str) {
         }
     }
 }
+
+
+
+
+function largestNumber(num) {
+    let result = ''
+    for (let i=0; i<num; i++){
+       result = result + '9'
+    }
+    let int = parseInt(result)
+    return int
+}
+
+function largestNumber(num) {
+    let placeholder = ''
+    for(let i = 0; i < num; i++) {
+        placeholder = placeholder.concat('9')
+    }
+    return parseInt(placeholder)
+}
+
+function largestNumber(num) {
+    const placeholder = '9'.repeat(num)
+    return parseInt(placeholder)
+}
