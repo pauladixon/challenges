@@ -5,18 +5,36 @@
 
     // makes a new array while keeping the same content in the original array
 
-let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
-let newPlanets = planets.slice(3, 5)
+    let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    let newPlanets = planets.slice(3, 5)
 
-    // console.log(newPlanets) => ['Mars', 'Jupiter']
     // console.log(planets) => ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    // console.log(newPlanets) => ['Mars', 'Jupiter']
 
 
 
+// push
 
-let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
-planets.push('Saturn')
-planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
+    // pushes a new array element to the end of the original array. modifies the array
+
+    let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    let newPlanets = planets.push('Saturn')
+
+    // console.log(planets) => ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
+    // console.log(newPlanets) => 6
+
+
+
+// unshift
+
+    // pushes a new array element to the beginning of the original array. modifies the array
+
+    let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    let newPlanets = planets.unshift('Moon')
+
+    // console.log(planets) => ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    // console.log(newPlanets) => 6
+
 
 let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
 planets.unshift('Moon')
