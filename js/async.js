@@ -340,3 +340,127 @@
     result()
         // => Error: Something went wrong (/index.js:3)
         //    nah
+
+
+
+// using the promises all method (parallel)
+
+    const start = () => {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(true)
+            }, 2000)
+        })
+    }
+    const mid = () => {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(true)
+            }, 4000)
+        })
+    }
+    const end = () => {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(true)
+            }, 100)
+        })
+    }
+    const final = async () => {
+        try {
+            const result = await Promise.all([start(), mid(), end()])
+            console.log(result)
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    final()
+        // => [true, true, true]
+        //    of note that if one promise fails, they will all fail
+
+
+
+// fulfill the fastest promise using promise race
+
+    const a  = () => {
+        return new Promise((res) => {
+            setTimeout(() => {
+                res('a')
+            }, 100)
+        })
+    }
+    const b = () => {
+        return new Promise((res) => {
+            setTimeout(() => {
+                res('b')
+            }, 2000)
+        })
+    }
+    const c = () => {
+        return new Promise((res) => {
+            setTimeout(() => {
+                res('c')
+            }, 10000)
+        })
+    }
+    const result = async () => {
+        try{
+            const final = await Promise.race([a(), b(), c()])
+            console.log(final)
+        } catch(err) {
+            console.log(err)
+        }
+    }
+    result()
+        // => a
+
+
+
+// get wow!:) using all and race
+
+    const taskW = ()=>{
+        return new Promise((res)=>{
+            setTimeout(()=>{
+                    res('W')
+            },1000)
+        })       
+    } 
+    const taskO = ()=>{
+        return new Promise((res)=>{
+            setTimeout(()=>{
+                    res('O')
+            },500)
+        })
+    }
+    const taskExclaim = ()=>{
+        return new Promise((res) => {
+            setTimeout(()=>{
+                    res('!')
+            },Math.floor(Math.random() * 1000))
+        })
+    }
+    const taskSmiley = ()=>{
+        return new Promise((res) => {
+            setTimeout(()=>{
+                    res(':)')
+            },300)
+        })
+    }
+    let getWow = async () => {
+        try{
+            let wow = ''
+            let part1 = await taskW()
+            let part2 = await Promise.all([taskO(), taskW()])
+            let part3 = await Promise.race([taskExclaim(), taskSmiley()])
+            console.log(wow + part1 + part2[0] + part2[1] + part3)
+        }catch(err){
+            console.log(err)
+        }
+    }
+    getWow()
+        // => 'WOW!' or 'WOW:)'
+
+
+
+// traffic light added to widgets
