@@ -1,5 +1,4 @@
 // js challenges
-    
 
 
 // replace elemToReplace within the array with substitutionElem
@@ -108,55 +107,77 @@
 
 
 
-function firstDigit(str) {
-    let array = str.split('')
-    for (let i=0; i<array.length; i++){
-        if (array[i] >= 0){
-            return array[i]
+// return the first (furthest to the left) integer in a string
+
+    // my solution 
+
+        function firstDigit(str) {
+            let array = str.split('')
+            for (let i=0; i<array.length; i++){
+                if (array[i] >= 0){
+                    return array[i]
+                }
+            }
         }
-    }
-}
 
-function firstDigit(str) {
-    const strNums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-    const chars = str.split('')
-    for(const char of chars) {
-        if(strNums.includes(char)) {
-            return char
+    // scrimba solution
+
+        function firstDigit(str) {
+            const strNums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+            const chars = str.split('')
+            for(const char of chars) {
+                if(strNums.includes(char)) {
+                    return char
+                }
+            }
         }
+    
+    firstDigit('abc4def5')
+        // => 4
+
+
+
+// return the largest possible number with the number of digits provided
+
+    // my solution
+
+        function largestNumber(num) {
+            let result = ''
+            for (let i=0; i<num; i++){
+            result = result + '9'
+            }
+            let int = parseInt(result)
+            return int
+        }
+
+    // scrimba solution 1
+
+        function largestNumber(num) {
+            let placeholder = ''
+            for(let i = 0; i < num; i++) {
+                placeholder = placeholder.concat('9')
+            }
+            return parseInt(placeholder)
+        }
+
+    // scrimba solution 2
+
+        function largestNumber(num) {
+            const placeholder = '9'.repeat(num)
+            return parseInt(placeholder)
+        }
+
+    largestNumber(3)
+        // => 999
+
+
+
+// find the maximum divisible number of the divisor within the boundary number
+
+    function maxMultiple(divisor, bound) {
+        let remainder = bound%divisor
+        return bound - remainder
     }
-}
 
-
-
-
-function largestNumber(num) {
-    let result = ''
-    for (let i=0; i<num; i++){
-       result = result + '9'
-    }
-    let int = parseInt(result)
-    return int
-}
-
-function largestNumber(num) {
-    let placeholder = ''
-    for(let i = 0; i < num; i++) {
-        placeholder = placeholder.concat('9')
-    }
-    return parseInt(placeholder)
-}
-
-function largestNumber(num) {
-    const placeholder = '9'.repeat(num)
-    return parseInt(placeholder)
-}
-
-
-
-
-
-function maxMultiple(divisor, bound) {
-    let remainder = bound%divisor
-    return bound - remainder
-}
+    maxMultiple(3, 10)
+        // => 9
