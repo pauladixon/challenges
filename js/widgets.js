@@ -117,9 +117,6 @@ robot.addEventListener('click', moveRobot)
 
 
 
-
-
-
 // render on button click - quote widget
 
 const quote = document.querySelector('#quote')
@@ -140,7 +137,6 @@ function displayQuote() {
 }
 
 button.addEventListener('click', displayQuote)
-
 
 
 
@@ -174,3 +170,55 @@ leftButton.addEventListener('click', moveLeft)
 
 waitListDisplay.innerHTML = waitList
 hereListDisplay.innerHTML = hereList
+
+
+
+// traffic light promises widget
+
+let active = 0
+let lights = document.querySelectorAll('.circle')
+
+const switchLight = (currentLight) => {
+    currentLight.classList.add(currentLight.getAttribute('color'))
+}
+const turnOffLight = (currentLight) => {
+    currentLight.className = 'circle'
+}
+const changeLight = () => {
+    return new Promise((resolve, reject) => {
+        let currentLight = lights[active]
+        if (active === 0){
+            switchLight(currentLight)
+            setTimeout(() => {
+                turnOffLight(currentLight)
+                active = 1
+                resolve(active)
+            }, 30000)
+        } if (active === 1) {
+            switchLight(currentLight)
+            setTimeout(() => {
+                turnOffLight(currentLight)
+                active = 2
+                resolve(active)
+            }, 40000)
+        } if (active === 2) {
+            switchLight(currentLight)
+            setTimeout(() => {
+                turnOffLight(currentLight)
+                active = 0
+                resolve(active)
+            }, 100000)
+        }
+    })
+}
+let trafficLight = async () => {
+    try {
+        await changeLight()
+        await changeLight()
+        await changeLight()
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+trafficLight()
