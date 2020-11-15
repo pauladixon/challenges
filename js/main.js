@@ -1,5 +1,5 @@
 
-// pacman
+// pacman game widget
 
 // const squares = Array.from(document.querySelectorAll('.grid div'))
 
@@ -96,7 +96,12 @@ squares[pacmanCurrentIndex].classList.add('pac-man')
 
 
 
-// robot
+
+
+
+
+
+// move on element click - robot widget
 
 const robot = document.querySelector('.robot')
 
@@ -111,7 +116,11 @@ function moveRobot(){
 robot.addEventListener('click', moveRobot)
 
 
-// quotes
+
+
+
+
+// render on button click - quote widget
 
 const quote = document.querySelector('#quote')
 const button = document.querySelector('button')
@@ -133,7 +142,9 @@ function displayQuote() {
 button.addEventListener('click', displayQuote)
 
 
-// list shift
+
+
+// list shift - packing tracking widget
 
 const leftButton = document.querySelector('#left')
 const rightButton = document.querySelector('#right')
