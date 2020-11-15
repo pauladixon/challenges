@@ -22,8 +22,10 @@
     let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
     let newPlanets = planets.push('Saturn')
 
-    // console.log(planets) => ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
-    // console.log(newPlanets) => 6
+    console.log(planets) 
+        // => ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
+    console.log(newPlanets) 
+        // => 6
 
 
 
@@ -34,15 +36,16 @@
     let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
     let newPlanets = planets.unshift('Moon')
 
-
-    // console.log(newPlanets) => 6
+    console.log(planets)
+        // => ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    console.log(newPlanets) 
+        // => 6
 
 
 
 // pop
 
     // removes the last element of the original array and stores it. modifies the array
-
 
     let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
     let removedPlanet = planets.pop()
@@ -96,14 +99,34 @@
         // => true
 
 
-let moon = 'Moon'
-let padded = moon.padStart(10, 'a')
-padded = 'aaaaaaMoon'
-let padTry = moon.padStart(10)
-padTry = '      Moon'
 
-let moon = 'Moon'
-let padded = moon.padEnd(10, 'a')
-padded = 'Moonaaaaaa'
-let padTry = moon.padEnd(1)
-padTry = 'Moon'
+// padStart
+
+    // pads the end of a given string with the second argument until the string is the length of the first argument. does not modify the original string
+    let moon = 'Moon'
+    let padded = moon.padStart(10, 'a')
+    let padTry = moon.padStart(10)
+
+    console.log(moon)
+        // => 'Moon
+    console.log(padded) 
+        // => 'aaaaaaMoon'
+    console.log(padTry) 
+        // => '      Moon'
+
+
+
+// padEnd
+
+    // pads the end of a given string with the second argument until the string is the length of the first argument. does not modify the original string
+    let moon = 'Moon'
+    let padded = moon.padEnd(10, 'a')
+    let padTry = moon.padEnd(1)
+
+    console.log(moon)
+        // => 'Moon
+    console.log(padded) 
+        // => 'Moonaaaaaa'
+    console.log(padTry) 
+        // => 'Moon'
+
