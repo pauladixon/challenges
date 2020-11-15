@@ -32,24 +32,33 @@
     let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
     let newPlanets = planets.unshift('Moon')
 
-    // console.log(planets) => ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+
     // console.log(newPlanets) => 6
 
 
-let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
-planets.unshift('Moon')
-planets = ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+
+// pop
+
+    // removes the last element of the original array and stores it. modifies the array
 
 
-let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
-let removedPlanet = planets.pop()
-removedPlanet = ['Saturn']
-planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
+    let removedPlanet = planets.pop()
 
-let planets = ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
-let removedPlanet = planets.shift()
-removedPlanet = ['Moon']
-planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    // console.log(planets) => ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    // console.log(removedPlanet) => 'Saturn'
+
+
+
+// shift
+
+    // removes the first element of the original array and stores it. modifies the array
+
+    let planets = ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    let removedPlanet = planets.shift()
+
+    // console.log(planets) => ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    // console.log(removedPlanet) => 'Moon'
 
 
 
