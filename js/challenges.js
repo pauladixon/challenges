@@ -1,90 +1,110 @@
-
-
 // js challenges
-
-
-function arrayReplace(array, elemToReplace, substitutionElem) {
-    for (let i=0; i<array.length; i++) {
-        if (array[i] === elemToReplace) {
-            array[i] = substitutionElem
-        }
-    }
-    return array
-}
-
-arrayReplace([1,2,1], 1, 3)
-
-
-
-
-function caseInsensitivePalindrome(str) {
-    let lowercase = str.toLowerCase()
-    let result = 0
-    for (i=0; i<lowercase.length; i++){
-        if (lowercase[i] === lowercase[lowercase.length - (i+1)]) {
-            result += 0
-        } else {
-            result += 1
-        }
-    }
-    if (result > 0){
-        return false
-    } else {
-        return true
-    }
-}
-
-function caseInsensitivePalindrome(str) {
-    const caselessStr = str.toLowerCase();
-    const reversedCaselessStr = caselessStr.split('').reverse().join(''); 
     
-    return caselessStr === reversedCaselessStr;
-}
 
-function caseInsensitivePalindrome(str) {
-    const caselessStr = str.toLowerCase();
-    let reversedCaselessStr = ''
 
-    for(let i = caselessStr.length - 1; i >= 0; i--) {
-        reversedCaselessStr += caselessStr[i]
+// replace elemToReplace within the array with substitutionElem
+
+    function arrayReplace(array, elemToReplace, substitutionElem) {
+        for (let i=0; i<array.length; i++) {
+            if (array[i] === elemToReplace) {
+                array[i] = substitutionElem
+            }
+        }
+        return array
     }
-    return caselessStr === reversedCaselessStr
-}
-
-caseInsensitivePalindrome('aaaBaaa')
+    arrayReplace([1,2,1], 1, 3)
+        // => [3, 2, 3]
 
 
 
+// return true or false if the string is a palindrome, regardless of case
 
-function encloseInBrackets(str) {
-    let array = str.split('')
-    array.unshift('(')
-    array.push(')')
-    let newStr = array.join('')
-    return newStr
-}
+    // my solution
 
-function encloseInBrackets(str) {
-    const solution1 = '(' + str + ')'
-    const solution2 = `(${str})`
-    const solution3 = '('.concat(str, ')')
-    
-    return solution3
-}
+        function caseInsensitivePalindrome(str) {
+            let lowercase = str.toLowerCase()
+            let result = 0
+            for (i=0; i<lowercase.length; i++){
+                if (lowercase[i] === lowercase[lowercase.length - (i+1)]) {
+                    result += 0
+                } else {
+                    result += 1
+                }
+            }
+            if (result > 0){
+                return false
+            } else {
+                return true
+            }
+        }
 
-encloseInBrackets('abc')
+    // scrimba solution 1
+
+        function caseInsensitivePalindrome(str) {
+            const caselessStr = str.toLowerCase();
+            const reversedCaselessStr = caselessStr.split('').reverse().join(''); 
+            
+            return caselessStr === reversedCaselessStr;
+        }
+
+    // scrimba solution 2
+
+        function caseInsensitivePalindrome(str) {
+            const caselessStr = str.toLowerCase();
+            let reversedCaselessStr = ''
+
+            for(let i = caselessStr.length - 1; i >= 0; i--) {
+                reversedCaselessStr += caselessStr[i]
+            }
+            return caselessStr === reversedCaselessStr
+        }
+
+    caseInsensitivePalindrome('AaaBaAA')
+        // => true
+    caseInsensitivePalindrome('AacCBaAA')
+        // => false
 
 
 
-function factorialNumber(num) {
-    let result = 1
-    for (let i=1; i<=num; i++){
-        result = result * i
+// enclose the string in parentheses
+
+    // my solution
+
+        function encloseInBrackets(str) {
+            let array = str.split('')
+            array.unshift('(')
+            array.push(')')
+            let newStr = array.join('')
+            return newStr
+        }
+
+    // scrimba solutions
+
+        function encloseInBrackets(str) {
+            const solution1 = '(' + str + ')'
+            const solution2 = `(${str})`
+            const solution3 = '('.concat(str, ')')
+            
+            return solution3
+        }
+
+    encloseInBrackets('abc')
+        // => '(abc)'
+
+
+
+// return the factorial of the given number
+
+    function factorialNumber(num) {
+        let result = 1
+        for (let i=1; i<=num; i++){
+            result *= i
+        }
+        return result
     }
-    return result
-}
 
-factorialNumber(21)
+    factorialNumber(9)
+        // => 362880
 
 
 
