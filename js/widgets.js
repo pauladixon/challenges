@@ -193,21 +193,21 @@ const changeLight = () => {
                 turnOffLight(currentLight)
                 active = 1
                 resolve(active)
-            }, 30000)
+            }, 1000)
         } if (active === 1) {
             switchLight(currentLight)
             setTimeout(() => {
                 turnOffLight(currentLight)
                 active = 2
                 resolve(active)
-            }, 40000)
+            }, 1000)
         } if (active === 2) {
             switchLight(currentLight)
             setTimeout(() => {
                 turnOffLight(currentLight)
                 active = 0
                 resolve(active)
-            }, 100000)
+            }, 30000)
         }
     })
 }
