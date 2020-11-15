@@ -148,10 +148,18 @@
             
             const userApi = 'https://randomuser.me/api/'
             
-            fetch(userApi).then(response=>response.json()).then(json=>{
+            fetch(userApi)
+            .then(response=>response.json())
+            .then(json=>{
+
                 const firstUser = json.results[0].name.first
-                fetch(userApi).then(response=>response.json()).then(json=>{
+
+                fetch(userApi)
+                .then(response=>response.json())
+                .then(json=>{
+
                     const secondUser = json.results[0].name.first
+                    
                     console.log(`${firstUser} and ${secondUser} are friends`)
                 })
             })
@@ -161,4 +169,174 @@
     
 
 
-// 
+// handle errors with catch for both async and promises if api call is invalid
+
+    // promises with catch
+        
+        document.getElementById('x').addEventListener('click', () => {
+
+            const userApi = 'https://randomuser.me/apii'
+
+            fetch(userApi)
+            .then(response=>response.json())
+            .then(json=>{
+
+                console.log('promise chaining:', json.results[0].name.first)
+            })
+            .catch(err=> console.log(err))
+        })
+        
+            // => SyntaxError: Unexpected token N in JSON at position 0 (SyntaxError: Unexpected token N in JSON at position 0:33)
+        
+
+    // async with catch
+
+        document.getElementById('y').addEventListener('click', async ()=> {
+
+            const userApi = 'https://randomuser.me/api/'
+
+            try {
+                const reposne = await fetch(userApi)
+                const json = await response.json()
+                console.log('async/await:', json.results[0].name.first)
+            } catch (err) {
+                console.log(err)
+            }
+        })
+
+            // => TypeError: Failed to fetch (/index.js:17)
+
+
+
+// promise states
+
+    // successful promise
+
+        function successfulPromise() {
+            return new Promise((resolve, reject) => {
+                resolve('success')
+            })
+        }
+
+        let practice = async () => {
+            try {
+                const result = await successfulPromise()
+                console.log(result)
+            } catch (err) {
+                console.log(err)
+            }
+        }
+
+        practice()
+            // => success
+
+
+    // rejected promise
+
+        function rejectedPromise() {
+            return new Promise((resolve, reject) => {
+                reject(new Error('error'))
+            })
+        }
+
+        let practice = async () => {
+            try {
+                const result = await rejectedPromise()
+                console.log(result)
+            } catch (err) {
+                console.log(err)
+            }
+        }
+
+        practice()
+            // => Error: error (/index.js:3)
+
+
+    // pending promise
+
+        function pendingPromise() {
+            return new Promise((resolve, reject) => {
+                const interval = setInterval(() => {
+                    console.log('pending')
+                }, 1000)
+                setTimeout(() => {
+                    clearInterval(interval)
+                    resolve('success after 4 seconds')
+                }, 4000);
+            })
+        }
+
+        let practice = async () => {
+            try {
+                const result = await pendingPromise()
+                console.log(result)
+            } catch (err) {
+                console.log(err)
+            }
+        }
+
+        practice()
+            // => pending
+            //    pending
+            //    pending
+            //    pending
+            //    success after 4 seconds
+
+
+
+// resolve or reject after 4 seconds based on random boolean
+
+    // my solution
+
+        const randomBool = Boolean(Math.round(Math.random())) // returns either 0 or 1 
+
+        function isHeroHere() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (randomBool === true) {
+                        resolve('batman is here')
+                    } else {
+                        reject(new Error('hero is on vacation'))
+                    }
+                }, 4000)
+            })
+        }
+
+        let result = async () => {
+            try {
+                const result = await isHeroHere()
+                console.log(result)
+            } catch(err){
+                console.log(err)
+            }
+        }
+
+        result()
+            // => batman is here
+            //    Error: hero is on vacation (/index.js:16)
+            //    (randomized)
+
+
+
+// using the promise finally method
+
+    const promise = () => {
+        return new Promise((resolve,reject)=>{
+            reject(new Error('Something went wrong'))
+        })
+    }
+
+    let result = async () => {
+        try {
+            const success = await promise()
+            console.log(success)
+        } catch (err) {
+            console.log(err)
+        } finally {
+            console.log('nah')
+        }
+    }
+
+    result()
+        // => Error: Something went wrong (/index.js:3)
+        //    nah
