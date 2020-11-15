@@ -273,6 +273,8 @@ printJoke()
 
 
 
+// using async / await
+
 document.getElementById("action").addEventListener("click", async ()=>{
     
     const userApi = 'https://randomuser.me/api/'
@@ -287,6 +289,8 @@ document.getElementById("action").addEventListener("click", async ()=>{
     
     console.log(`${firstUser} and ${secondUser} are friends!`)
 })
+
+// using promise chain
 
 document.getElementById("action").addEventListener("click", ()=>{
     
