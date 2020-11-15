@@ -273,6 +273,44 @@ printJoke()
 
 
 
+document.getElementById("action").addEventListener("click", async ()=>{
+    
+    const userApi = 'https://randomuser.me/api/'
+    
+    let response1 = await fetch(userApi)
+    let results1 = await response1.json()
+    let firstUser = results1.results[0].name.first
+    
+    let response2 = await fetch(userApi)
+    let results2 = await response2.json()
+    let secondUser = results2.results[0].name.first
+    
+    console.log(`${firstUser} and ${secondUser} are friends!`)
+})
+
+document.getElementById("action").addEventListener("click", ()=>{
+    
+    const userApi = 'https://randomuser.me/api/'
+    
+    fetch(userApi).then(response=>response.json()).then(json=>{
+        const firstUser = json.results[0].name.first
+        fetch(userApi).then(response=>response.json()).then(json=>{
+            const secondUser = json.results[0].name.first
+            console.log(`${firstUser} and ${secondUser} are friends`)
+        })
+    })
+})
+    
+    
+
+
+
+
+
+
+
+
+
 // js challenges
 
 
