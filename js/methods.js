@@ -3,13 +3,15 @@
 
 // slice 
 
-    // makes a new array while keeping the same content in the original array
+    // makes a new array while keeping the same content in the original array. does not modify the array
 
     let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
     let newPlanets = planets.slice(3, 5)
 
-    // console.log(planets) => ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
-    // console.log(newPlanets) => ['Mars', 'Jupiter']
+    console.log(planets) 
+        // => ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    console.log(newPlanets) 
+        // => ['Mars', 'Jupiter']
 
 
 
@@ -45,8 +47,10 @@
     let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
     let removedPlanet = planets.pop()
 
-    // console.log(planets) => ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
-    // console.log(removedPlanet) => 'Saturn'
+    console.log(planets) 
+        // => ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    console.log(removedPlanet) 
+        // => 'Saturn'
 
 
 
@@ -57,18 +61,39 @@
     let planets = ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
     let removedPlanet = planets.shift()
 
-    // console.log(planets) => ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
-    // console.log(removedPlanet) => 'Moon'
+    console.log(planets) 
+        // => ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    console.log(removedPlanet) 
+        // => 'Moon'
 
 
 
-let planets = ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
-let location = planets.indexOf('Moon')
-location = 0 
+// indexOf
 
-let planets = ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
-let boolean = planets.includes('Moon')
-boolean = true
+    // shows the index of a requested element in an array. does not modify the array
+
+    let planets = ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    let location = planets.indexOf('Moon')
+
+    console.log(planets) 
+        // => ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    console.log(location) 
+        // => 0
+        // if you index for something that doesn't exist in the array => -1
+
+
+
+// includes
+
+    // gives a boolean for whether the array includes the element requested. does not modify the array
+
+    let planets = ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    let boolean = planets.includes('Moon')
+
+    console.log(planets) 
+        // => ['Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+    console.log(boolean) 
+        // => true
 
 
 let moon = 'Moon'
