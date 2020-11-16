@@ -21,4 +21,26 @@ prep:
 
 questions to ask:
 1. what's the project / team i'll be on?
-2.
+2. what code quality standard does the organization follow?
+3. what is the best part of working here?
+4. why are you interested in hiring ME?
+5. final statement. - show interest, say about experience. remind why you are unique and great for the role. something to stick in the back of their head.
+
+
+
+recommendations
+
+- put in a certificates repo including the image and the description
+    - meditation
+    - GA
+    - scrimba
+    - fill out all slots on the profile
+- refactor old projects for github reps and practice
+- catch the eye of recruiters
+    - eye catching banner - put name and title in it!
+    - let recruiters know you're available
+        - put in job titles you're available for
+    - make about eye-catching. maybe you launched a web app that has 10000 users? put in somthing about small spells app. something short and sweet and speaks to your excellence.
+    - featured should include the big name projects you are proud of
+- format your experience like a job application. a check list of skills and then bullet points of accomplishments. go and see what the job apps say and then structure your experience to reflect that.
+![](https://i.imgur.com/rWPqMWF.png)
