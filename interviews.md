@@ -3,7 +3,7 @@ what are falsey values
 
 
 
-questions:
+questions for me:
 1. how do you stay up to date?
 2. why you? - design-minded engineer.
 3. why us?
@@ -17,3 +17,8 @@ prep:
 3. business casual
 4. video introduction - include in cover letter or resume
 5. be early and bring a book - a clean coder or code complete book. the pragmatic programmer. read it while you're waiting. 
+
+
+questions to ask:
+1. what's the project / team i'll be on?
+2.
