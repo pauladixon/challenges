@@ -181,3 +181,54 @@
 
     maxMultiple(3, 10)
         // => 9
+
+
+
+// pangram check function
+
+    // my solution (DOES NOT WORK)
+
+        let isPangram = (str) => {
+            let result = 0
+            let lowercase = str.toLowerCase().split('')
+            let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+            for (let i=0; i<alphabet.length; i++){
+                for (let j=0; j<lowercase.length; j++){
+                    if (alphabet[i] == lowercase[j]){
+                        result = result + 1
+                    }
+                }
+            }
+            if (result >= 26) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        isPangram('The quick brown fox jumps over the lazy dog')
+
+
+    // scrimba solution 1 
+
+        const abc = 'abcdefghijklmnopqrstuvwxyz'
+        
+        const isPangram = (str) => {
+            const newStr = str.toLowerCase().split(' ').join('')
+            const newSet = [...new Set(newStr)].sort().join('')
+            return abc === newSet
+        }
+        
+        console.log(isPangram('The quick brown fox jumps over the lazy dog'))
+            // => true
+
+    // scrimba solution 2
+
+        const isPangram = (str) => {
+
+            const regexMatch = new Set(str.toLowerCase().match(/[a-z]/gi))
+            return regexMatch.size === 26
+        }
+
+        console.log(isPangram('The quick brown fox jumps over the lazy dog'))
+        // => true
