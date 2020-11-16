@@ -36,11 +36,40 @@ recommendations
     - scrimba
     - fill out all slots on the profile
 - refactor old projects for github reps and practice
-- catch the eye of recruiters
-    - eye catching banner - put name and title in it!
-    - let recruiters know you're available
-        - put in job titles you're available for
-    - make about eye-catching. maybe you launched a web app that has 10000 users? put in somthing about small spells app. something short and sweet and speaks to your excellence.
-    - featured should include the big name projects you are proud of
-- format your experience like a job application. a check list of skills and then bullet points of accomplishments. go and see what the job apps say and then structure your experience to reflect that.
-![](https://i.imgur.com/rWPqMWF.png)
+- linkedin
+    - catch the eye of recruiters
+        - eye catching banner - put name and title in it!
+        - let recruiters know you're available
+            - put in job titles you're available for
+        - make about eye-catching. maybe you launched a web app that has 10000 users? put in somthing about small spells app. something short and sweet and speaks to your excellence.
+        - featured should include the big name projects you are proud of
+    - format your experience like a job application. a check list of skills and then bullet points of accomplishments. go and see what the job apps say and then structure your experience to reflect that.
+        - ![](https://i.imgur.com/rWPqMWF.png)
+    - upload certificates on the education portion of your linked in and describe bootcamps at length
+    - keep track of everything on there
+    - add volunteer experience. go to code.org and volunteer there.
+    - skills - take more tests
+    - accomplishments
+        - courses, awards. add links and details
+- resume
+    - introduction ![](https://i.imgur.com/JV49rsr.png)
+        - peak their interest. a photo or a joke or something. cats. something that's personable and memorable. want to stand out
+    - technical skills ![](https://i.imgur.com/NKgf9TA.png)
+        - put on git!
+        - also follow up with recruiters and ask why they've said no if they do write back
+    - personal projects
+    - experience ![](https://i.imgur.com/cDNNcmb.png)
+        - 4-6 bullet points
+        - put a contact on the experience listing
+        - put stats on experience - according to what apps are looking for
+    - bold the keywords
+        - average recruiter looks at your resume for 10 seconds
+    - how many hours of coursework. how many projects
+    - 2 column grid
+        ![](https://i.imgur.com/U5oqV81.png)
+    - novoresume.com
+- apply to the brand new roles. people won't look after week 1.
+- fill out as many apps as you can until you get it. spend 2-4 hours a day with it.
+- you need experience way more than a higher paying position
+- apply to pittsburgh places and say willing to relocate / remote
+- be intentional. don't assume things will just happen.
