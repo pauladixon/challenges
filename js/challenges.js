@@ -263,3 +263,16 @@
         console.log(removeDuplicateValues(['one', 'one', 'two', 'three', 'three', 'one']))
             // => ['one', 'two', 'three']
                 
+
+
+// map over an array using reduce
+
+    let map = (array, method) => {
+        let reduceArray = array.reduce((acc, current) => {
+            return [...acc, method(current)]
+        }, [])
+        return reduceArray
+    }
+
+    console.log(map([1, 2, 3], (v) => v+1))
+        // => [2, 3, 4]
