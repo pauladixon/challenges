@@ -498,5 +498,29 @@
         getUsers()
             // => [{name: 'Patricica Lebsack', email: 'Julianne.OConner@kory.org}]
 
-            
+
     // scrimba solution
+
+        const getUsers = async () => {
+            const api = 'https://jsonplaceholder.typicode.com/users'
+            const response = await fetch(api)
+            const json = await response.json()
+            
+            const result = json.filter( users => users.name.toLowerCase().includes('k'))
+            const array = result.map(({ name, email })=>({ name, email }))
+            
+            return array
+            
+        }
+        
+        const call = async () => {
+            try{
+            console.log(await getUsers())   
+                
+            }catch(err){
+                console.log(err)
+            }
+        }
+        
+        call()
+            // => [{name: 'Patricica Lebsack', email: 'Julianne.OConner@kory.org}]
