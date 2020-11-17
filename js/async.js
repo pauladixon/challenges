@@ -606,4 +606,37 @@
         console.log(isIsogram('patteRN')) 
             // => false
 
-        
+
+
+// is leap year challenge
+    
+    // divisible by 4, but not when it is a century year unless that century is divisible by 400
+
+        // my solution
+
+            let isLeapYear = (year) => {
+                if (year % 400 === 0){
+                    return true
+                } else if (year % 100 === 0){
+                    return false
+                } else if (year % 4 === 0){
+                    return true
+                } else return false
+            }
+
+
+        // scrimba solution
+
+            const isLeapYear = (year) => {
+                const numberYear = Number(year)
+                return numberYear % 100 === 0 ? numberYear % 400 === 0 : numberYear % 4 === 0
+            }
+
+            console.log(isLeapYear("2020")) 
+                // => true
+            console.log(isLeapYear("2018")) 
+                // => false
+            console.log(isLeapYear("1700")) 
+                // => false
+            console.log(isLeapYear("1600")) 
+                // => true
