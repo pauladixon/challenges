@@ -506,13 +506,11 @@
             const response = await fetch(api)
             const json = await response.json()
             
-            const results = json.filter( users => users.name.toLowerCase().includes('k'))
-            const array = results.map( results => ({ 
-                name: results.name, 
-                email: results.email
-            }))
-                
+            const result = json.filter( users => users.name.toLowerCase().includes('k'))
+            const array = result.map(({ name, email })=>({ name, email }))
+            
             return array
+            
         }
         
         const call = async () => {
@@ -526,3 +524,30 @@
         
         call()
             // => [{name: 'Patricica Lebsack', email: 'Julianne.OConner@kory.org}]
+
+
+
+// Rain Language
+
+    // 3 => 'Pling'
+    // 5 => 'Plang'
+    // 7 => 'Plong
+    // else return number
+
+    // my solution
+
+        let rainLanguage = (num) => {
+            let result = ''
+            if (num % 3 === 0){
+                result += 'Pling'
+            } if (num % 5 === 0){
+                result += 'Plang'
+            } if (num % 7 === 0){
+                result += 'Plong'
+            } else result = num
+            
+            return result
+        }
+
+        console.log(rainLanguage(105))
+            // => 'PlingPlangPlong'
