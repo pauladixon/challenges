@@ -506,11 +506,13 @@
             const response = await fetch(api)
             const json = await response.json()
             
-            const result = json.filter( users => users.name.toLowerCase().includes('k'))
-            const array = result.map(({ name, email })=>({ name, email }))
-            
+            const results = json.filter( users => users.name.toLowerCase().includes('k'))
+            const array = results.map( results => ({ 
+                name: results.name, 
+                email: results.email
+            }))
+                
             return array
-            
         }
         
         const call = async () => {
