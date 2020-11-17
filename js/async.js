@@ -515,7 +515,7 @@
         
         const call = async () => {
             try{
-            console.log(await getUsers())   
+            console.log(await getUsers())  
                 
             }catch(err){
                 console.log(err)
@@ -566,3 +566,25 @@
 
         console.log(rainLanguage(105))
             // => 'PlingPlangPlong'
+
+
+
+// is the string an Isogram
+
+    // my solution 
+
+        let isIsogram = (str) => {
+            let result = ''
+            let array = str.toLowerCase().split('')
+            let newSet = [...new Set(array)]
+            for (let i=0; i<newSet.length; i++)
+                if (array[i] === newSet[i]) {
+                    result = true
+                } else result = false
+            return result
+        }
+        
+        console.log(isIsogram('hfegw'))
+            // => true
+        console.log(isIsogram('hfeggw'))
+        // => false
