@@ -463,4 +463,40 @@
 
 
 
-// traffic light added to widgets
+// return users from api call that contain the letter k
+
+    // call json placeholder to get 10 users then return the names of the users whose names include the letter 'k'
+
+    // my solution - (isn't returning properly)
+        
+        let getUsers = () => {
+            let ten = []
+            let tenK = []
+            fetch('https://jsonplaceholder.typicode.com/users')
+                .then(response => response.json())
+                .then(data => {
+                    for (let i=0; i<10; i++){
+                        ten.push({
+                            name: data[i].name, 
+                            email: data[i].email
+                            })
+                    }
+                    
+                    for (let j=0; j<10; j++){
+                        let name = ten[j].name.split(' ').join('')
+                        if (name.includes('k')){
+                            tenK.push({
+                                name: data[j].name, 
+                                email: data[j].email
+                            })
+                        }
+                    }
+                    console.log(tenK)
+                })
+        }
+
+        getUsers()
+            // => [{name: 'Patricica Lebsack', email: 'Julianne.OConner@kory.org}]
+
+            
+    // scrimba solution
