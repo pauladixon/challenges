@@ -233,3 +233,33 @@
         console.log(isPangram('The quick brown fox jumps over the lazy dog'))
         // => true
 
+
+
+// remove duplicate values with reduce
+
+    // my solution
+
+        let removeDuplicateValues = (array) => {
+            let reduceArray = array.reduce((acc, current) => {
+                if (acc.includes(current)){
+                    return acc
+                } else {
+                    acc = [...acc, current]
+                    return acc
+                }
+            }, [])
+            return reduceArray
+        }
+
+
+    // scrimba solution
+
+        const removeDuplicateValues = (array) => {
+            return array.reduce((accumulator,value)=>{
+                return accumulator.includes(value) ? accumulator : [...accumulator, value]
+            },[])
+        }
+        
+        console.log(removeDuplicateValues(['one', 'one', 'two', 'three', 'three', 'one']))
+            // => ['one', 'two', 'three']
+                
