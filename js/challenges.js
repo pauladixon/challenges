@@ -307,5 +307,29 @@
         // => ['one','two','three','four','five']
 
 
-        
+
 // transpose matrix
+  
+    // my solution - does not make a matrix, but a long array
+        let transposeMatrix = (matrix) => {
+            let newMatrix = []
+            for (let i=0; i<matrix[0].length; i++){
+                for (let j=0; j<matrix[0].length; j++){
+                    newMatrix[i].push(matrix[j][i])
+                }
+            }
+            return newMatrix
+        }
+
+    // scrimba solution 
+
+        const transposeMatrix = (array) => {
+            return array[0].map((_,i)=>array.map(v=>v[i]))
+        }
+        
+        console.log(transposeMatrix([
+            [1,2,3],
+            [1,2,3],
+            [1,2,3],
+        ]))
+            // => [[1,1,1],[2,2,2],[3,3,3]]
