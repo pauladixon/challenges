@@ -276,3 +276,36 @@
 
     console.log(map([1, 2, 3], (v) => v+1))
         // => [2, 3, 4]
+
+
+
+// flatten an array using reduce
+
+    const makeFlat = (array) => {
+        let reducedArray = array.reduce((acc, current)=>{
+            let flat = []
+            if (Array.isArray(current)){
+                flat = [...acc, ...makeFlat(current)]
+                return flat
+            } else {
+                flat = [...acc, current]
+                return flat
+            }
+        },[])
+
+        return reducedArray
+    }
+
+    const makeFlat = (array) => {
+        return array.reduce((accumulator,value)=>{
+            return Array.isArray(value) ? [...accumulator, ...makeFlat(value)] : [...accumulator,value]
+        },[])
+      }
+
+      
+      console.log(makeFlat(["one", ["two", "three"], ["four", ["five"]]])) 
+        // => ['one','two','three','four','five']
+
+
+        
+// transpose matrix
