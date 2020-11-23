@@ -139,16 +139,16 @@ function moveRight(){
     hereListDisplay.innerHTML = hereList
 }
 
-rightButton.addEventListener('click', moveRight)
+rightButton.addEventListener('click', moveLeft)
 
 function moveLeft(){
     let package = waitList.pop()
-    hereLisst.unshift(package)
+    hereList.unshift(package)
     waitListDisplay.innerHTML = waitList
     hereListDisplay.innerHTML = hereList
 }
 
-leftButton.addEventListener('click', moveLeft)
+leftButton.addEventListener('click', moveRight)
 
 waitListDisplay.innerHTML = waitList
 hereListDisplay.innerHTML = hereList
