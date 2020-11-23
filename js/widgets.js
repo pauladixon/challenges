@@ -61,14 +61,19 @@ let pacmanCurrentIndex = 490
 squares[pacmanCurrentIndex].classList.add('pac-man')
 
 function control(e) {
-    if (e.keyCode === 40) {
-        console.log('pressed down')
-    } else if (e.keyCode === 38) {
-        console.log('pressed up')
-    } else if (e.keyCode === 37) {
-        console.log('pressed left')
-    } else if (e.keyCode === 39) {
-        console.log('pressed right')
+    switch(e.keyCode){
+        case 40:
+            console.log('pressed down')
+        break
+        case 38:
+            console.log('pressed up')
+        break
+        case 37:
+            console.log('pressed left')
+        break
+        case 39:
+            console.log('pressed right')
+        break
     }
 }
 
