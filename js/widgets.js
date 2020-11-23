@@ -61,15 +61,16 @@ let pacmanCurrentIndex = 490
 squares[pacmanCurrentIndex].classList.add('pac-man')
 
 function control(e) {
+    squares[pacmanCurrentIndex].classList.remove('pac-man')
     switch(e.keyCode){
         case 40:
-            console.log('pressed down')
+            if (pacmanCurrentIndex + width < width * width) pacmanCurrentIndex += width
         break
         case 38:
             console.log('pressed up')
         break
         case 37:
-            console.log('pressed left')
+            if (pacmanCurrentIndex % width !== 0) pacmanCurrentIndex -= 1
         break
         case 39:
             console.log('pressed right')
