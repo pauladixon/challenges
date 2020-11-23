@@ -67,15 +67,16 @@ function control(e) {
             if (pacmanCurrentIndex + width < width * width) pacmanCurrentIndex += width
         break
         case 38:
-            console.log('pressed up')
+            if (pacmanCurrentIndex - width >= 0) pacmanCurrentIndex -= width
         break
         case 37:
             if (pacmanCurrentIndex % width !== 0) pacmanCurrentIndex -= 1
         break
         case 39:
-            console.log('pressed right')
+            if (pacmanCurrentIndex % width < width - 1) pacmanCurrentIndex += 1
         break
     }
+    squares[pacmanCurrentIndex].classList.add('pac-man')
 }
 
 document.addEventListener('keyup', control)
