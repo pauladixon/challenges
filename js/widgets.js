@@ -140,7 +140,11 @@ function moveGhost(ghost) {
     let direction = directions[Math.floor(Math.random() * directions.length)]
     ghost.timerId = setInterval(function() {
 
-    } ghost.speed)
+        sqaures[ghost.currentIndex].classList.remove(ghost.className)
+        ghost.currentIndex += direction
+        squares[ghost.currentIndex].classList.add(ghost.className)
+
+    }, ghost.speed)
 }
 
 // move on element click - robot widget
