@@ -140,7 +140,7 @@ function moveGhost(ghost) {
     let direction = directions[Math.floor(Math.random() * directions.length)]
     ghost.timerId = setInterval(function() {
 
-        sqaures[ghost.currentIndex].classList.remove(ghost.className)
+        squares[ghost.currentIndex].classList.remove(ghost.className)
         ghost.currentIndex += direction
         squares[ghost.currentIndex].classList.add(ghost.className)
 
