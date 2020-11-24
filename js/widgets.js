@@ -101,6 +101,7 @@ function control(e) {
     }
     squares[pacmanCurrentIndex].classList.add('pac-man')
     pacDotEaten()
+    powerPelletEaten()
 }
 
 document.addEventListener('keyup', control)
