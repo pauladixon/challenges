@@ -116,6 +116,7 @@ function pacDotEaten() {
 
 function powerPelletEaten() {
     if (squares[pacmanCurrentIndex].classList.contains('power-pellet')){
+        squares[pacmanCurrentIndex].classList.remove('power-pellet')
         score += 10
         ghosts.forEach(ghost => ghost.isScared = true)
         setTimeout(unscareGhosts, 10000)
@@ -158,7 +159,7 @@ function moveGhost(ghost) {
             && !squares[ghost.currentIndex + direction].classList.contains('ghost')
         ){
             squares[ghost.currentIndex].classList.remove(ghost.className)
-            squares[ghost.currentIndex].classList.remove('ghost')
+            squares[ghost.currentIndex].classList.remove('ghost', 'scared-ghost')
 
             ghost.currentIndex += direction
 
@@ -168,7 +169,7 @@ function moveGhost(ghost) {
         } else direction = directions[Math.floor(Math.random() * directions.length)]
 
         if (ghost.isScared) {
-            square[ghost.currentIndex].classList.add('scared-ghost')
+            squares[ghost.currentIndex].classList.add('scared-ghost')
         }
     }, ghost.speed)
 }
