@@ -65,7 +65,8 @@ function control(e) {
     switch(e.keyCode){
         case 40:
             if (
-                !squares[pacmanCurrentIndex + width].classList.contains('wall') 
+                squares[pacmanCurrentIndex + width].classList.contains('ghost-lair')
+                && !squares[pacmanCurrentIndex + width].classList.contains('wall') 
                 && pacmanCurrentIndex + width < width * width
                 ) pacmanCurrentIndex += width
         break
