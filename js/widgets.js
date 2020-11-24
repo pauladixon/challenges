@@ -64,7 +64,10 @@ function control(e) {
     squares[pacmanCurrentIndex].classList.remove('pac-man')
     switch(e.keyCode){
         case 40:
-            if (pacmanCurrentIndex + width < width * width) pacmanCurrentIndex += width
+            if (
+                !squares[pacmanCurrentIndex + width].classList.contains('wall') 
+                && pacmanCurrentIndex + width < width * width
+                ) pacmanCurrentIndex += width
         break
         case 38:
             if (pacmanCurrentIndex - width >= 0) pacmanCurrentIndex -= width
