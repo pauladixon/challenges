@@ -108,6 +108,7 @@ document.addEventListener('keyup', control)
 
 function pacDotEaten() {
     if (squares[pacmanCurrentIndex].classList.contains('pac-dot')){
+        squares[pacmanCurrentIndex].classList.remove('pac-dot')
         score ++
         scoreDisplay.innerHTML = score
     }
