@@ -119,7 +119,7 @@ function powerPelletEaten() {
         squares[pacmanCurrentIndex].classList.remove('power-pellet')
         score += 10
         ghosts.forEach(ghost => ghost.isScared = true)
-        setTimeout(unscareGhosts, 10000)
+        setTimeout(unscareGhosts, 100000)
     }
 }
 
@@ -170,6 +170,13 @@ function moveGhost(ghost) {
 
         if (ghost.isScared) {
             squares[ghost.currentIndex].classList.add('scared-ghost')
+        }
+
+        if (ghost.isScared && squares[ghost.currentIndex].classList.contains('pac-man')){
+            squares[ghost.currentIndex].classList.remove(ghost.className, 'ghost', 'scared-ghost')
+            ghost.currentIndex = ghost.startIndex
+            score += 100
+            squares[ghost.currentIndex].classList.add(ghost.className, 'ghost')
         }
     }, ghost.speed)
 }
