@@ -77,12 +77,14 @@ function control(e) {
         break
         case 37:
             if (
-                pacmanCurrentIndex % width !== 0
+                !squares[pacmanCurrentIndex - 1].classList.contains('wall')
+                && pacmanCurrentIndex % width !== 0
                 ) pacmanCurrentIndex -= 1
         break
         case 39:
             if (
-                pacmanCurrentIndex % width < width - 1
+                !squares[pacmanCurrentIndex + 1].classList.contains('wall')
+                && pacmanCurrentIndex % width < width - 1
                 ) pacmanCurrentIndex += 1
         break
     }
