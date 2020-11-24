@@ -72,7 +72,8 @@ function control(e) {
         break
         case 38:
             if (
-                !squares[pacmanCurrentIndex - width].classList.contains('wall')
+                squares[pacmanCurrentIndex - width].classList.contains('ghost-lair')
+                && !squares[pacmanCurrentIndex - width].classList.contains('wall')
                 && pacmanCurrentIndex - width >= 0
                 ) pacmanCurrentIndex -= width
         break
