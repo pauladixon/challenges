@@ -116,8 +116,13 @@ function pacDotEaten() {
 function powerPelletEaten() {
     if (squares[pacmanCurrentIndex].classList.contains('power-pellet')){
         score += 10
-        
+        ghosts.forEach(ghost => ghost.isScared = true)
+        setTimeout(unscareGhosts, 10000)
     }
+}
+
+function unscareGhosts(){
+    ghosts.forEach(ghost => ghost.isScared = false)
 }
 
 class Ghost {
