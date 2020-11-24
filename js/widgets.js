@@ -145,8 +145,8 @@ const ghosts = [
 ]
 
 ghosts.forEach(ghost => squares[ghost.currentIndex].classList.add(ghost.className))
-
 ghosts.forEach(ghost => moveGhost(ghost))
+
 
 function moveGhost(ghost) {
     const directions = [-1, +1, -width, +width]
@@ -166,6 +166,10 @@ function moveGhost(ghost) {
             squares[ghost.currentIndex].classList.add('ghost')
 
         } else direction = directions[Math.floor(Math.random() * directions.length)]
+
+        if (ghost.isScared) {
+            square[ghost.currentIndex].classList.add('scared-ghost')
+        }
     }, ghost.speed)
 }
 

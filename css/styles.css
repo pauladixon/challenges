@@ -81,6 +81,11 @@ body {
     border: none;
 }
 
+.scared-ghost {
+    background-color: gainsboro;
+    border: none;
+}
+
 .robot-container {
     width: 100vw;
     display: flex;
