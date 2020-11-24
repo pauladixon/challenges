@@ -70,13 +70,20 @@ function control(e) {
                 ) pacmanCurrentIndex += width
         break
         case 38:
-            if (pacmanCurrentIndex - width >= 0) pacmanCurrentIndex -= width
+            if (
+                !squares[pacmanCurrentIndex - width].classList.contains('wall')
+                && pacmanCurrentIndex - width >= 0
+                ) pacmanCurrentIndex -= width
         break
         case 37:
-            if (pacmanCurrentIndex % width !== 0) pacmanCurrentIndex -= 1
+            if (
+                pacmanCurrentIndex % width !== 0
+                ) pacmanCurrentIndex -= 1
         break
         case 39:
-            if (pacmanCurrentIndex % width < width - 1) pacmanCurrentIndex += 1
+            if (
+                pacmanCurrentIndex % width < width - 1
+                ) pacmanCurrentIndex += 1
         break
     }
     squares[pacmanCurrentIndex].classList.add('pac-man')
