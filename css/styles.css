@@ -63,18 +63,22 @@ body {
 
 .inky {
     background-color: skyblue;
+    border: none;
 }
 
 .blinky {
     background-color: goldenrod;
+    border: none;
 }
 
 .pinky {
     background-color: seagreen;
+    border: none;
 }
 
 .clyde {
     background-color: sandybrown;
+    border: none;
 }
 
 .robot-container {
