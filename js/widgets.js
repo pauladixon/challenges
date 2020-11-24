@@ -3,7 +3,8 @@
 
 const width = 28
 const grid  = document.querySelector('.grid')
-const score = document.querySelector('#score')
+const scoreDisplay = document.querySelector('#score')
+let score = 0
 let squares = []
 const layout = [
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
@@ -99,12 +100,18 @@ function control(e) {
         break
     }
     squares[pacmanCurrentIndex].classList.add('pac-man')
+    pacDotEaten()
 }
 
 document.addEventListener('keyup', control)
 
 
-
+function pacDotEaten() {
+    if (squares[pacmanCurrentIndex].classList.contains('pac-dot')){
+        score ++
+        scoreDisplay.innerHTML = score
+    }
+}
 
 
 // move on element click - robot widget
