@@ -65,21 +65,22 @@ function control(e) {
     switch(e.keyCode){
         case 40:
             if (
-                squares[pacmanCurrentIndex + width].classList.contains('ghost-lair')
+                !squares[pacmanCurrentIndex + width].classList.contains('ghost-lair')
                 && !squares[pacmanCurrentIndex + width].classList.contains('wall') 
                 && pacmanCurrentIndex + width < width * width
                 ) pacmanCurrentIndex += width
         break
         case 38:
             if (
-                squares[pacmanCurrentIndex - width].classList.contains('ghost-lair')
+                !squares[pacmanCurrentIndex - width].classList.contains('ghost-lair')
                 && !squares[pacmanCurrentIndex - width].classList.contains('wall')
                 && pacmanCurrentIndex - width >= 0
                 ) pacmanCurrentIndex -= width
         break
         case 37:
             if (
-                !squares[pacmanCurrentIndex - 1].classList.contains('wall')
+                !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair')
+                && !squares[pacmanCurrentIndex - 1].classList.contains('wall')
                 && pacmanCurrentIndex % width !== 0
                 ) pacmanCurrentIndex -= 1
         break
