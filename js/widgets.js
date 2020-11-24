@@ -102,6 +102,8 @@ function control(e) {
     squares[pacmanCurrentIndex].classList.add('pac-man')
     pacDotEaten()
     powerPelletEaten()
+    checkForWin()
+    checkForGameOver()
 }
 
 document.addEventListener('keyup', control)
@@ -179,6 +181,7 @@ function moveGhost(ghost) {
             squares[ghost.currentIndex].classList.add(ghost.className, 'ghost')
         }
         checkForGameOver()
+        checkForWin()
     }, ghost.speed)
 }
 
@@ -194,6 +197,13 @@ function checkForGameOver() {
 
 }
 
+function checkForWin() {
+    if (score === 274) {
+        ghosts.forEach(ghost => clearInterval(ghost.timerId))
+        document.removeEventListener('keyup', control)
+        scoreDisplay.innerHTML = 'YOU WIN'
+    }
+}
 
 
 
