@@ -113,6 +113,13 @@ function pacDotEaten() {
     }
 }
 
+function powerPelletEaten() {
+    if (squares[pacmanCurrentIndex].classList.contains('power-pellet')){
+        score += 10
+        
+    }
+}
+
 class Ghost {
     constructor(className, startIndex, speed) {
         this.className = className
@@ -151,9 +158,17 @@ function moveGhost(ghost) {
 
             squares[ghost.currentIndex].classList.add(ghost.className)
             squares[ghost.currentIndex].classList.add('ghost')
+
         } else direction = directions[Math.floor(Math.random() * directions.length)]
     }, ghost.speed)
 }
+
+
+
+
+
+
+
 
 // move on element click - robot widget
 
