@@ -40,6 +40,7 @@ const layout = [
 
 function createBoard() {
     for (let i=0; i<layout.length; i++){
+
         const square = document.createElement('div')
         grid.appendChild(square)
         squares.push(square)
@@ -155,7 +156,7 @@ function moveGhost(ghost) {
     const directions = [-1, +1, -width, +width]
     let direction = directions[Math.floor(Math.random() * directions.length)]
     ghost.timerId = setInterval(function() {
-
+        
         if (
             !squares[ghost.currentIndex + direction].classList.contains('wall') 
             && !squares[ghost.currentIndex + direction].classList.contains('ghost')
@@ -194,7 +195,6 @@ function checkForGameOver() {
         document.removeEventListener('keyup', control)
         scoreDisplay.innerHTML = 'GAME OVER'
     }
-
 }
 
 function checkForWin() {
