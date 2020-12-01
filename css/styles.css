@@ -26,7 +26,7 @@ body {
     margin-top: 150px;
     width: 436px;
     height: 436px;
-    border: solid whitesmoke 8px;
+    border: solid antiquewhite 8px;
     display: flex;
     flex-wrap: wrap;
 }
