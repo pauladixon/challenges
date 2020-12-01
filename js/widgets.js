@@ -156,7 +156,7 @@ function moveGhost(ghost) {
     const directions = [-1, +1, -width, +width]
     let direction = directions[Math.floor(Math.random() * directions.length)]
     ghost.timerId = setInterval(function() {
-        
+
         if (
             !squares[ghost.currentIndex + direction].classList.contains('wall') 
             && !squares[ghost.currentIndex + direction].classList.contains('ghost')
@@ -255,8 +255,8 @@ const rightButton = document.querySelector('#right')
 const waitListDisplay = document.querySelector('#first-list')
 const hereListDisplay = document.querySelector('#second-list')
 
-const waitList = ['furterer volumizers', 'bloomscape plant', 'bombas socks', 'dsw uggs', 'dyson replacement']
-const hereList = ['scratching post', 'rose toner']
+const waitList = ['filing cabinet', ' external monitor', ' standing mat', ' desk shelf']
+const hereList = ['everybody.world shorts', ' hair stuff']
 
 function moveRight(){
     let package = hereList.pop()
