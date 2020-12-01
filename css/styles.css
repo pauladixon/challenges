@@ -23,7 +23,6 @@ body {
 }
 
 .grid {
-    margin-top: 150px;
     width: 436px;
     height: 436px;
     border: solid antiquewhite 8px;
@@ -186,7 +185,6 @@ body {
     display: flex;
     justify-content: space-around;
     width: 100vw;
-    margin-top: -750px;
 }
 
 .title {
