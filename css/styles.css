@@ -22,6 +22,10 @@ body {
     padding: 0;
 }
 
+.pac-man-container {
+    margin-top: 200px;
+}
+
 .grid {
     width: 436px;
     height: 436px;
@@ -93,7 +97,7 @@ body {
 #score {
     font-size: 42px;
     z-index: 100;
-    color: rebeccapurple;
+    color: cadetblue;
     font-family: cursive;
     margin-left: 10px;
 }
@@ -185,6 +189,7 @@ body {
     display: flex;
     justify-content: space-around;
     width: 100vw;
+    margin-top: -1100px;
 }
 
 .title {
