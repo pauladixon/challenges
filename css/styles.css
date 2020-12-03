@@ -237,6 +237,7 @@ body {
 .traffic-light-container {
     background-color: gainsboro;
     position: absolute;
+    z-index: -100;
 	border-radius: 50px;
 	display: flex;
 	flex-direction: column;
