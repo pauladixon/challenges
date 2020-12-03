@@ -108,7 +108,7 @@ body {
     width: 100vw;
     display: flex;
     justify-content: center;
-    margin: -600px 700px 0px 0px;
+    margin: 0px 700px 0px 0px;
 }
 
 .robot {
@@ -137,8 +137,8 @@ body {
 
 .mask {
     margin-top: 12.5px;
-    height:25px;
-    width:75px;
+    height: 25px;
+    width: 75px;
     background-color: saddlebrown;
     border-radius: 12.5px;
     display: flex;
@@ -165,7 +165,7 @@ body {
     width: 100vw;
     margin: 0px 100px;
     position: absolute;
-    margin-top: 500px;
+    margin-top: 0px;
 }
 
 #quote {
@@ -230,7 +230,7 @@ body {
 	padding: 15px 0;
 	height: 200px;
     width: 70px;
-    margin: 0px 0px 200px 700px;
+    margin: 0px 0px 0px 700px;
 }
 
 .circle {
