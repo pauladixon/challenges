@@ -108,7 +108,7 @@ body {
     width: 100vw;
     display: flex;
     justify-content: center;
-    margin-top: 60px;
+    margin: -600px 700px 0px 0px;
 }
 
 .robot {
@@ -218,6 +218,8 @@ body {
     padding: 5px 10px;
 }
 
+
+
 .traffic-light-container {
     background-color: gainsboro;
 	border-radius: 50px;
@@ -230,7 +232,6 @@ body {
     width: 70px;
     margin: -300px 0px 200px 700px;
 }
-
 
 .circle {
 	background-color: rgba(167, 192, 163, 0.26);
