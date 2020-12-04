@@ -221,6 +221,8 @@ body {
 
 .button-container {
     margin-bottom: 0px;
+    height: 26px;
+    display: flex;
 }
 
 #left {
