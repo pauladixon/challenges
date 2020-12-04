@@ -182,6 +182,7 @@ body {
     color: rebeccapurple;
     font-family: cursive;
     letter-spacing: .3em;
+    margin: 0px 0px 0px 5px;
 }
   
 .quote-button {
@@ -282,17 +283,17 @@ body {
 }
 
 .circle.red {
-	background-color: #c03a2b6e;
+	background-color: tomato;
 	box-shadow: 0 0 20px 5px #c03a2b57;
 }
 
 .circle.yellow {
-	background-color: #f1c40f60;
+    background-color: gold;
 	box-shadow: 0 0 20px 5px #f1c40f3f;
 }
 
 .circle.green {
-	background-color: #2ecc703d;
+	background-color: lightseagreen;
 	box-shadow: 0 0 20px 5px #2ecc7052;
 }
 
