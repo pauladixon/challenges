@@ -223,6 +223,14 @@ body {
     margin-bottom: 0px;
 }
 
+#left {
+    margin: 0px 0px 0px 100px;
+}
+
+#right {
+    margin: 0px 100px 0px 0px;
+}
+
 .track-button {
     background-color: coral;
     border-radius: 10px;
