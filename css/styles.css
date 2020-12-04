@@ -206,7 +206,6 @@ body {
 }
 
 .title-right {
-    color: palevioletred;
     text-align: right;
 }
 
@@ -230,11 +229,11 @@ body {
 }
 
 #left {
-    margin: 0px 120px 0px 0px;
+    margin: 0px 145px 0px 0px;
 }
 
 #right {
-    margin: 0px 0px 0px 120px;
+    margin: 0px 0px 0px 145px;
 }
 
 .track-button {
