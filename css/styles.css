@@ -199,14 +199,15 @@ body {
 
 .tracking-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     position: absolute;
     width: 100vw;
     margin: 0px 0px 530px 0px;
 }
 
-.title {
+.title-right {
     color: palevioletred;
+    text-align: right;
 }
 
 .box {
@@ -222,15 +223,15 @@ body {
 .button-container {
     margin-bottom: 0px;
     height: 26px;
-    display: flex;
+    
 }
 
 #left {
-    margin: 0px 0px 0px 100px;
+    margin: 0px 0px 0px 200px;
 }
 
 #right {
-    margin: 0px 100px 0px 0px;
+    margin: 0px 200px 0px 0px;
 }
 
 .track-button {
