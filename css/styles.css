@@ -224,16 +224,17 @@ body {
     margin: 0px;
     height: 26px;
     position: absolute;
-    width: 100vw;
+    width: 90vw;
     display: flex;
+    justify-content: space-between;
 }
 
 #left {
-    margin: 0px 0px 0px 200px;
+    margin: 0px 120px 0px 0px;
 }
 
 #right {
-    margin: 0px 200px 0px 0px;
+    margin: 0px 0px 0px 120px;
 }
 
 .track-button {
