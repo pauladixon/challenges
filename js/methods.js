@@ -26,7 +26,7 @@
         // => ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
     console.log(newPlanets) 
         // => 6
-
+/
 
 
 // unshift
