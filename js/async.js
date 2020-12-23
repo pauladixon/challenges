@@ -196,7 +196,7 @@
             const userApi = 'https://randomuser.me/api/'
 
             try {
-                const reposne = await fetch(userApi)
+                const response = await fetch(userApi)
                 const json = await response.json()
                 console.log('async/await:', json.results[0].name.first)
             } catch (err) {
