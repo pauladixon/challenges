@@ -235,4 +235,6 @@
         //  => 3
 
 
+// forEach
 
+    // runs a function over each element of an array
