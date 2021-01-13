@@ -1,5 +1,4 @@
-// js challengess
-
+// js challenges
 
 // replace elemToReplace within the array with substitutionElem
 
