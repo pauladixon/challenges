@@ -24,7 +24,7 @@
             let result = 0
             for (i=0; i<lowercase.length; i++){
                 if (lowercase[i] === lowercase[lowercase.length - (i+1)]) {
-                    result += 
+                    result += 0
                 } else {
                     result += 1
                 }
